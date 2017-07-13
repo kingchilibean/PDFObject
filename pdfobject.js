@@ -2,7 +2,7 @@
 //jshint unused:false, strict: false
 
 /*
-    PDFObject v2.0.201604172
+    PDFObject v2.1
     https://github.com/pipwerks/PDFObject
     Copyright (c) 2008-2016 Philip Hutchison
     MIT-style license: http://pipwerks.mit-license.org/
@@ -48,6 +48,8 @@
         getTargetElement,
         generatePDFJSiframe,
         isIOS = (function (){ return (/iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase())); })(),
+        // https://stackoverflow.com/a/9851769/1026742
+        isFirefox = typeof InstallTrigger !== 'undefined',
         generateEmbedElement;
 
 
@@ -78,7 +80,7 @@
     supportsPdfActiveX = function (){ return !!(createAXO("AcroPDF.PDF") || createAXO("PDF.PdfCtrl")); };
 
     //Determines whether PDF support is available
-    supportsPDFs = (supportsPdfMimeType || (isIE() && supportsPdfActiveX()));
+    supportsPDFs = (supportsPdfMimeType || isFirefox || (isIE() && supportsPdfActiveX()));
 
     //Create a fragment identifier for using PDF Open parameters when embedding PDF
     buildFragmentString = function(pdfParams){

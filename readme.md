@@ -1,3 +1,5 @@
+### This is a fork of the main library to add-in an opinionated Firefox check for inline PDF support
+
 PDFObject is a lightweight JavaScript utility for dynamically embedding PDFs in HTML documents.
 
 Copyright (c) 2008-2016 Philip Hutchison
