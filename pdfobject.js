@@ -2,7 +2,7 @@
 //jshint unused:false, strict: false
 
 /*
-    PDFObject v2.1
+    PDFObject v2.1.0
     https://github.com/pipwerks/PDFObject
     Copyright (c) 2008-2016 Philip Hutchison
     MIT-style license: http://pipwerks.mit-license.org/
